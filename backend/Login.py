@@ -1,4 +1,5 @@
 class Login:
+
     def __init__(self):
         self.username = "admin"  # Default username
         self.password = "1234"  # Default password

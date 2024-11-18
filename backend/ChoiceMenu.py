@@ -1,6 +1,6 @@
 class ChoiceMenu:
     def __init__(self):
-        self.choices = ["xxxxx", "Number System Converter"]
+        self.choices = ["IP planner" , "Number System Converter"]
 
     def display_choices(self):
         print("\nMain Menu:")
