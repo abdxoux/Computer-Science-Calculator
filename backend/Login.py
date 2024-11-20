@@ -1,8 +1,11 @@
+import getpass
+
+
 class Login:
 
     def __init__(self):
-        self.username = "admin"  # Default username
-        self.password = "1234"  # Default password
+        self.username = "admin"
+        self.password = "1234"
 
     def authenticate(self):
         print("Login Required")

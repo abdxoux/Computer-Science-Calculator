@@ -3,7 +3,6 @@ import ipaddress
 class IPPlanner:
     @staticmethod
     def compute_ip_details( network, subnet_mask):
-        """Compute network details based on network address and mask."""
         try:
             network_address = ipaddress.IPv4Network(f"{network}/{subnet_mask}", strict=False)
             return {
@@ -22,8 +21,8 @@ class IPPlanner:
     def run(self):
         while True:
             self.menu()
-            network = input("Enter Network Address (e.g., 192.168.1.0): ")
-            subnet_mask = input("Enter Subnet Mask (e.g., 24): ")
+            network = input("Enter Network Address (ex: 192.168.1.0): ")
+            subnet_mask = input("Enter Subnet Mask (ex: 24): ")
 
             result = self.compute_ip_details(network, subnet_mask)
             if isinstance(result, dict):
