@@ -7,9 +7,7 @@ class NumberSystemConverter:
             "10": (16, 10), "11": (16, 2), "12": (16, 8)
         }
     @staticmethod
-    def convert_number( value,
-                        from_base,
-                        to_base):
+    def convert_number( value, from_base,to_base):
 
         decimal_value = int(value, from_base)
         if to_base == 2:

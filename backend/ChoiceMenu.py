@@ -1,6 +1,6 @@
 class ChoiceMenu:
     def __init__(self):
-        self.choices = ["IP planner" , "Number System Converter"]
+        self.choices = ["IP Planner", "Number System Converter", "Calculator"]
 
     def display_choices(self):
         print("\nMain Menu:")
@@ -11,8 +11,11 @@ class ChoiceMenu:
     def get_choice(self):
         while True:
             self.display_choices()
-            choice = input("Choose an option: ")
-            if choice in {"1", "2", "0"}:
-                return choice
-            else:
-                print("Invalid choice! Please try again.")
+            try:
+                choice = input("Choose an option: ")
+                if 0 <= int(choice) <= len(self.choices):  # Validate input as integer within range
+                    return choice
+                else:
+                    print("Invalid choice. Please try again.")
+            except ValueError:
+                print("Invalid input. Please enter a number.")
