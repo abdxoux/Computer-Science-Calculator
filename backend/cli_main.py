@@ -55,22 +55,7 @@ def main():
         elif choice == "2":
             converter.run()
         elif choice == "3":
-            while True:
-                try:
-                    num1 = float(input("Enter first number: "))
-                    operation = input("Enter operation (+, -, *, /, **, //, %, root): ")
-                    if operation != "root":
-                        num2 = float(input("Enter second number: "))
-                    else:
-                        num2 = None
-                    result = calculator.calculate(None, num1, num2, operation)
-
-                    print(f"Result: {result}")
-                    break
-                except ValueError:
-                    print("Invalid input. Please enter numbers only.")
-                except Exception as e:
-                    print(f"Error: {e}")
+            calculator.run()
         else:
             print("Invalid choice. Please try again.")
 
