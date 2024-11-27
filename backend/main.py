@@ -215,11 +215,12 @@ class IPPlannerPage(StyledPage):
                 text=(
                     f"Network Address: {result['Network Address']}\n"
                     f"Broadcast Address: {result['Broadcast Address']}\n"
-                    f"Available Hosts: {len(result['Available Hosts'])}"
+                    f"Available Hosts: {result['Number of available Hosts']}"  # Corrected key
                 )
             )
         else:
             self.result_label.configure(text=f"Error: {result}")
+
 
 
 class NumberSystemConverterPage(StyledPage):
