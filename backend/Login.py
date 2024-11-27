@@ -1,5 +1,4 @@
 import bcrypt
-
 class Login:
     def __init__(self):
         self.user_data = {"admin": bcrypt.hashpw("admin".encode(), bcrypt.gensalt())}

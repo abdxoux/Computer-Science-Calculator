@@ -3,17 +3,16 @@ import ipaddress
 class IPPlanner:
     @staticmethod
     def compute_ip_details( network, subnet_mask):
-        """Compute network details based on network address and mask."""
+        #Compute network details based on network address and mask.
         try:
             network_address = ipaddress.IPv4Network(f"{network}/{subnet_mask}", strict=False)
             return {
                 "Network Address" : str(network_address.network_address),
                 "Broadcast Address" : str(network_address.broadcast_address),
                 "Number of available Hosts" : len(list(network_address.hosts())),
-                "Available Hosts": list(network_address.hosts())
             }
-        except ValueError as e:
-            return str(e)
+        except ValueError :
+            print(ValueError)
     @staticmethod
     def menu():
         print("\nIP Planner")

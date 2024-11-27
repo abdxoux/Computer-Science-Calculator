@@ -215,7 +215,7 @@ class IPPlannerPage(StyledPage):
                 text=(
                     f"Network Address: {result['Network Address']}\n"
                     f"Broadcast Address: {result['Broadcast Address']}\n"
-                    f"Available Hosts: {result['Number of available Hosts']}"  # Corrected key
+                    f"Available Hosts: {result['Number of available Hosts']}"
                 )
             )
         else:
